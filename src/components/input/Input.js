@@ -2,7 +2,7 @@ import React from 'react';
 import { useController } from 'react-hook-form';
 import PropTypes from 'prop-types';
 
-const Input = ({ placeholder, control, name, type }) => {
+const Input = ({ control, name, type = 'text', ...rest }) => {
   const { field } = useController({
     control,
     name,
@@ -12,10 +12,11 @@ const Input = ({ placeholder, control, name, type }) => {
   return (
     <div className="relative">
       <input
+        id={name}
         type={type}
         className="w-full px-6 py-4 text-sm font-medium border text-text1 border-strock rounded-xl placeholder:text-text4"
-        placeholder={placeholder}
         {...field}
+        {...rest}
       />
     </div>
   );

@@ -10,9 +10,8 @@ const Button = ({ type = 'button', children, className = '', isLoading = false, 
 
   return (
     <button
-      className={`flex justify-center text-white p-4 text-base font-semibold rounded-xl min-h-[56px] ${
-        !!isLoading ? 'opacity-50 pointer-events-none' : ''
-      } ${className}`}
+      className={`flex justify-center text-white p-4 text-base font-semibold rounded-xl min-h-[56px] 
+      ${!!isLoading ? 'opacity-50 pointer-events-none' : ''} ${className}`}
       type={type}
       {...rest}
     >

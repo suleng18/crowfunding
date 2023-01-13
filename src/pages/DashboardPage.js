@@ -1,12 +1,22 @@
+import Heading from 'components/common/Heading';
 import LayoutDashboard from 'layout/LayoutDashboard';
+import CampaignGrid from 'modules/campaign/CampaignGrid';
+import CampaignItem from 'modules/campaign/CampaignItem';
 import React from 'react';
+import { v4 } from 'uuid';
 
 const DashboardPage = () => {
   return (
     <LayoutDashboard>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam repellat quisquam,
-      cupiditate voluptate nobis distinctio corrupti vero ullam maxime est? Itaque quibusdam placeat
-      minima nostrum repellat hic illum aut facere?
+      <Heading number={4}>Your campaign</Heading>
+      <Heading>Popular Campaign</Heading>
+      <CampaignGrid>
+        {Array(4)
+          .fill(0)
+          .map((item) => (
+            <CampaignItem key={v4()}></CampaignItem>
+          ))}
+      </CampaignGrid>
     </LayoutDashboard>
   );
 };

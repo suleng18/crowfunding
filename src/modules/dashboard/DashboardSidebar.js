@@ -57,8 +57,7 @@ const DashboardSidebar = () => {
         <NavLink
           to={link.url}
           key={link.title}
-          className="flex items-center gap-x-5 md:w-12 md:h-12 md:justify-center md:rounded-xl md:mb-8
-          text-icon-color last:mt-auto last:bg-white last:shadow-sdprimary"
+          className="flex items-center gap-x-5 md:w-12 md:h-12 md:justify-center md:rounded-xl md:mb-8 text-icon-color last:mt-auto last:bg-white last:shadow-sdprimary"
         >
           <span>{link.icon}</span>
           <span className="md:hidden">{link.title}</span>

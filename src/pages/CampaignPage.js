@@ -34,7 +34,7 @@ const CampaignPage = () => {
             </a>
           </div>
         </div>
-        <Button type="button" className="bg-secondary text-secondary bg-opacity-20">
+        <Button type="button" kind="ghost" className="px-8" href="/start-campaign">
           Create campign
         </Button>
       </div>
@@ -45,6 +45,21 @@ const CampaignPage = () => {
         <CampaignFeature></CampaignFeature>
         <CampaignFeature></CampaignFeature>
       </CampaignGrid>
+      <div className="mt-10 text-center">
+        <Button kind="ghost" className="px-8 mx-auto">
+          <span>See more</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+          </svg>
+        </Button>
+      </div>
     </LayoutDashboard>
   );
 };

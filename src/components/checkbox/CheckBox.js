@@ -8,7 +8,11 @@ const CheckBox = ({ checked, onClick, name, children }) => {
         ${checked ? 'bg-primary border-primary' : 'border-strock dark:border-text3'}`}
         onClick={onClick}
       >
-        <input type="checkbox" name={name} />
+        <input
+          type="checkbox"
+          name={name}
+          // className="hidden"
+        />
         <span className={`${checked ? '' : 'opacity-0 invisible'}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

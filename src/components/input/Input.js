@@ -24,11 +24,13 @@ const Input = (props) => {
         {...field}
         {...rest}
       />
+
       {error.length > 0 && (
         <span className="absolute top-2/4 -translate-y-[50%] left-6 text-sm font-medium text-error pointer-events-none error-input">
           {error}
         </span>
       )}
+
       {children && (
         <span className="absolute right-6 top-2/4 -translate-y-[50%] cursor-pointer select-none">
           {children}

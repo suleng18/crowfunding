@@ -5,9 +5,9 @@ import React from 'react';
 const StartCampaignPage = () => {
   return (
     <div>
-      <LayoutDashboard>
+      <>
         <CampaignAddNew></CampaignAddNew>
-      </LayoutDashboard>
+      </>
     </div>
   );
 };

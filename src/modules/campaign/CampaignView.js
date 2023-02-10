@@ -1,5 +1,9 @@
 import { Button } from 'components/button';
 import React from 'react';
+import CampaignGrid from './CampaignGrid';
+import CampaignItem from './CampaignItem';
+import CampaignPerk from './CampaignPerk';
+import CampaignSupport from './CampaignSupport';
 import CampCategory from './parts/CampCategory';
 import CampDesc from './parts/CampDesc';
 import CampImage from './parts/CampImage';
@@ -9,7 +13,7 @@ import CampViewAuthor from './parts/CampViewAuthor';
 
 const CampaignView = () => {
   return (
-    <div>
+    <>
       <div
         className="h-[140px] rounded-3xl bg-cover bg-no-repeat bg-center bg-opacity-40 flex items-center justify-center text-white text-[40px] font-bold mb-10"
         style={{
@@ -55,7 +59,40 @@ const CampaignView = () => {
           <Button className="w-full text-white bg-primary">Back this project</Button>
         </div>
       </div>
-    </div>
+      <div className="flex justify-between mt-[100px] items-center bg-white p-5 border-b border-slate-100 mb-6">
+        <div className="flex items-center text-sm font-medium text-text3 gap-x-14">
+          <span className="cursor-pointer text-secondary">Campaign</span>
+          <span className="cursor-pointer text-secondary">Campaign</span>
+          <span className="cursor-pointer text-secondary">Campaign</span>
+          <span className="cursor-pointer text-secondary">Campaign</span>
+        </div>
+        <Button className="text-white bg-primary">Back this project</Button>
+      </div>
+
+      <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] mb-[70px]">
+        <div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reiciendis maxime
+          blanditiis ipsa ullam ipsam unde facilis dolor consequatur omnis laboriosam cum commodi
+          nemo itaque aut in pariatur, sit magnam?
+        </div>
+        <div>
+          <CampaignSupport></CampaignSupport>
+          <div className="mb-[60px]"></div>
+          <div className="flex flex-col gap-y-[30px]">
+            <CampaignPerk></CampaignPerk>
+            <CampaignPerk></CampaignPerk>
+            <CampaignPerk></CampaignPerk>
+          </div>
+        </div>
+      </div>
+      <h2 className="mb-10 text-xl font-semibold">You also may be interested in</h2>
+      <CampaignGrid>
+        <CampaignItem></CampaignItem>
+        <CampaignItem></CampaignItem>
+        <CampaignItem></CampaignItem>
+        <CampaignItem></CampaignItem>
+      </CampaignGrid>
+    </>
   );
 };
 

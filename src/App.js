@@ -7,8 +7,15 @@ import React, { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
-
+import Modal from 'react-modal';
 // const SignUpPage = lazy(() => import('./pages/SignUpPage'));
+
+const customStyles = {
+  content: {},
+};
+
+Modal.setAppElement('#root');
+Modal.defaultStyles = {};
 
 function App() {
   return (

@@ -14,12 +14,7 @@ import CampViewAuthor from './parts/CampViewAuthor';
 const CampaignView = () => {
   return (
     <>
-      <div
-        className="h-[140px] rounded-3xl bg-cover bg-no-repeat bg-center bg-opacity-40 flex items-center justify-center text-white text-[40px] font-bold mb-10"
-        style={{
-          backgroundImage: `linear-gradient(179.14deg, rgba(32,18,63,0) -7.14%, #000000 87.01%), url(https://source.unsplash.com/random)`,
-        }}
-      >
+      <div className="h-[140px] rounded-3xl bg-cover bg-no-repeat bg-center bg-opacity-40 flex items-center justify-center text-white text-[40px] font-bold mb-10 gradient-banner">
         <h1>Education</h1>
       </div>
       <div className="flex items-start w-full gap-x-10 max-w-[1066px]">
@@ -71,9 +66,8 @@ const CampaignView = () => {
 
       <div className="grid gap-x-[124px] grid-cols-[1.3fr,1fr] mb-[70px]">
         <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium reiciendis maxime
-          blanditiis ipsa ullam ipsam unde facilis dolor consequatur omnis laboriosam cum commodi
-          nemo itaque aut in pariatur, sit magnam?
+          <h2 className="mb-5 text-lg font-semibold uppercase">Story</h2>
+          <div className="w-full bg-white"></div>
         </div>
         <div>
           <CampaignSupport></CampaignSupport>

@@ -1,6 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Button, ButtonGoogle } from 'components/button';
-import { CheckBox } from 'components/checkbox';
+import { Checkbox } from 'components/checkbox';
 import FormGroup from 'components/common/FormGroup';
 import { IconEyeToggle } from 'components/icon';
 import { Input } from 'components/input';
@@ -82,13 +82,13 @@ const SignUpPage = () => {
           </Input>
         </FormGroup>
         <div className="flex mb-5 gap-x-5">
-          <CheckBox onClick={handleToogleTerm} name="term" checked={acceptTerm}>
+          <Checkbox onClick={handleToogleTerm} name="term" checked={acceptTerm}>
             <p className="flex-1 text-xs lg:text-sm text-text2 dark:text-text3">
               I agree to the <span className="underline text-secondary">Terms of Use</span> and have
               read and understand the{' '}
               <span className="underline text-secondary">Privacy policy</span>.
             </p>
-          </CheckBox>
+          </Checkbox>
         </div>
         <Button type="submit" className="w-full" kind="primary">
           Create my account

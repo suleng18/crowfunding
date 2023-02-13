@@ -20,7 +20,7 @@ input:focus + .error-input {
   padding: 15px 25px;
   .ql-toolbar.ql-snow {
     border: none;
-    @apply bg-text4 bg-opacity-10 rounded-xl py-3 px-5 inline-block;
+    @apply bg-text4 bg-opacity-10 rounded-xl py-3 px-5 flex items-center justify-center;
   }
   .ql-container.ql-snow,
   .ql-editor {

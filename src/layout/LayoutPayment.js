@@ -38,7 +38,6 @@ const LayoutPayment = ({ back = '/' }) => {
             <span className="text-sm font-semibold leading-normal text-primary">Back</span>
           </Link>
         </div>
-
         <Outlet></Outlet>
       </div>
     </div>

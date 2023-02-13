@@ -13,6 +13,8 @@ import axios from 'axios';
 import { Button } from 'components/button';
 import useOnChange from 'hooks/useOnChange';
 import { toast } from 'react-toastify';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
 Quill.register('modules/imageUploader', ImageUploader);
 
@@ -70,6 +72,9 @@ const CampaignAddNew = () => {
     }
     fetchCountries();
   }, [filterCountry]);
+
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
   const handleSelectDropdownOption = (name, value) => {
     setValue(name, value);
@@ -182,11 +187,19 @@ const CampaignAddNew = () => {
         <FormRow>
           <FormGroup>
             <Label>Start Date</Label>
-            <Input control={control} name="start_date" placeholder="Start Date"></Input>
+            <DatePicker
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              dateFormat="dd-MM-yyyy"
+            />
           </FormGroup>
           <FormGroup>
             <Label>End Date</Label>
-            <Input control={control} name="end_date" placeholder="End Date"></Input>
+            <DatePicker
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              dateFormat="dd-MM-yyyy"
+            />
           </FormGroup>
         </FormRow>
         <div>

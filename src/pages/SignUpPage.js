@@ -8,7 +8,9 @@ import { Label } from 'components/label';
 import useToogleValue from 'hooks/useToogleValue';
 import LayoutAuthentication from 'layout/LayoutAuthentication';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { authRegister } from 'store/auth/auth-slice';
 import * as yup from 'yup';
 
 const SignUpPage = () => {
@@ -24,14 +26,22 @@ const SignUpPage = () => {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { isValid, isSubmitting, errors },
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onSubmit',
   });
 
-  const handleSignUp = (values) => {
-    console.log('🚀 ~ values', values);
+  const dispatch = useDispatch();
+
+  const handleSignUp = async (values) => {
+    try {
+      dispatch(authRegister(values));
+      reset({});
+    } catch (error) {
+      console.log('🚀 ~ error:', error);
+    }
   };
 
   const { value: acceptTerm, handleToggleValue: handleToogleTerm } = useToogleValue();

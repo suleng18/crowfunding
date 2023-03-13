@@ -6,7 +6,9 @@ import { Input } from 'components/input';
 import { Label } from 'components/label';
 import useToogleValue from 'hooks/useToogleValue';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { authLogin } from 'store/auth/auth-slice';
 import * as yup from 'yup';
 import LayoutAuthentication from '../layout/LayoutAuthentication';
 
@@ -30,15 +32,17 @@ const SignInPage = () => {
 
   const { value: showPassword, handleToggleValue: handleTooglePassWord } = useToogleValue();
 
+  const dispatch = useDispatch();
+
   const handleSignIn = (values) => {
-    console.log(values);
+    dispatch(authLogin(values));
   };
 
   return (
     <LayoutAuthentication heading="Welcome Back!">
       <p className="mb-6 text-xs font-normal text-center lg:text-sm text-text3 lg:mb-8">
-        Dont have an account?{' '}
-        <Link to="/sign-up" className="font-medium underline text-primary">
+        Don't have an account?{' '}
+        <Link to="/register" className="font-medium underline text-primary">
           Sign up
         </Link>
       </p>

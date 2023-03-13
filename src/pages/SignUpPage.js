@@ -51,8 +51,8 @@ const SignUpPage = () => {
     <LayoutAuthentication heading="Sign Up">
       <p className="mb-6 text-xs font-normal text-center lg:text-sm text-text3 lg:mb-8">
         Already have an account?{' '}
-        <Link to="/sign-in" className="font-medium underline text-primary">
-          Sign in
+        <Link to="/login" className="font-medium underline text-primary">
+          Login
         </Link>
       </p>
       <ButtonGoogle text="Sign up with Google"></ButtonGoogle>
